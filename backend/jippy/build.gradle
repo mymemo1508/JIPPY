@@ -1,0 +1,89 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+	id 'jacoco' // JaCoCo 플러그인 추가
+}
+
+group = 'com.hbhw'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+jacoco {
+	toolVersion = "0.8.10"
+	reportsDirectory = file("build/reports/jacoco")
+}
+
+/** Jacoco start **/
+test {
+	useJUnitPlatform()
+	finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+	reports {
+		xml {
+			enabled true
+		}
+		csv {
+			enabled true
+		}
+		html {
+			enabled true
+		}
+
+		xml.destination file(project.layout.buildDirectory.dir("jacoco/index.xml")) as File
+		csv.destination file(project.layout.buildDirectory.dir("jacoco/index.csv")) as File
+		html.destination file(project.layout.buildDirectory.dir("jacoco/index.html")) as File
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation 'mysql:mysql-connector-java:8.0.28'
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.7.0'
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.5'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+	implementation group: 'org.openpnp', name: 'opencv', version: '4.9.0-0'
+	implementation group: 'org.json', name: 'json', version: '20250107'
+	implementation group: 'commons-io', name: 'commons-io', version: '2.18.0'
+	implementation group: 'org.webjars', name: 'stomp-websocket', version: '2.3.4'
+	implementation 'com.google.zxing:core:3.5.3'
+	implementation 'com.google.zxing:javase:3.5.3'
+	implementation group: 'com.google.firebase', name: 'firebase-admin', version: '9.4.3'
+	implementation 'io.awspring.cloud:spring-cloud-aws-s3:3.0.2'
+	testImplementation group: 'software.amazon.awssdk', name: 's3', version: '2.30.17'
+	testImplementation group: 'org.mockito', name: 'mockito-inline', version: '5.2.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

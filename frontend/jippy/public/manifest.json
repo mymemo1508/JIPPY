@@ -1,0 +1,25 @@
+{
+  "name": "Jippy",
+  "short_name": "Jippy",
+  "icons": [
+    {
+      "src": "/icons/pwa.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/pwa.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "viewport": "width=device-width, initial-scale=1",
+  "gcm_sender_id": "70892831219"
+}

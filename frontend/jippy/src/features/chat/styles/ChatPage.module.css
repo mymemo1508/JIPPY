@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* NavBar 높이를 고려 */
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .mobileHeader {
+    display: none;
+    background-color: #F27B39;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .toggleButton {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .emptyRoom {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+  
+  /* 모바일 반응형 */
+  @media (max-width: 768px) {
+    .mobileHeader {
+      display: block;
+    }
+    .content {
+      flex-direction: column;
+    }
+  }
+  

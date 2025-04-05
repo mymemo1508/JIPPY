@@ -1,0 +1,51 @@
+/* AttendanceNotification.module.css */
+.container {
+  @apply fixed inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-50;
+}
+
+.notificationBox {
+  @apply w-72 h-72 bg-white rounded-3xl shadow-lg;
+}
+
+.notificationContent {
+  @apply flex flex-col items-center h-full p-6;
+}
+
+.dateTimeContainer {
+  @apply text-center mb-8;
+}
+
+.dateText {
+  @apply text-xl font-bold text-gray-900 mb-2;
+}
+
+.timeText {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.messageText {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.checkIconWrapper {
+  @apply relative w-20 h-20 mb-8;
+}
+
+.checkIconCircle {
+  @apply absolute inset-0 rounded-full border-4;
+  @apply border-[#F27B39];
+}
+
+.checkIconInner {
+  @apply flex items-center justify-center h-full;
+}
+
+.confirmButton {
+  @apply w-full max-w-[200px] h-9 rounded-lg mt-auto;
+  @apply bg-[#F27B39] text-white hover:bg-[#E16328];
+  @apply transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#F27B39] focus:ring-offset-2;
+}
+
+.confirmButtonText {
+  @apply text-sm font-semibold;
+}

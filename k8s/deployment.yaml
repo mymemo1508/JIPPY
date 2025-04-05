@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jippy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jippy
+  template:
+    metadata:
+      labels:
+        app: jippy
+    spec:
+      containers:
+        - name: jippy
+          image: jippy:latest # Minikube 내부에서 빌드한 이미지 사용
+          ports:
+            - containerPort: 8082

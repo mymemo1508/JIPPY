@@ -1,0 +1,32 @@
+.listItem {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+  }
+  
+  .listItem:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .roomTitle {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  .preview {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .messageContent {
+    flex: 1;
+  }
+  
+  .timestamp {
+    margin-left: 0.5rem;
+    color: #999;
+  }
+  

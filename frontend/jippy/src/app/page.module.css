@@ -1,0 +1,35 @@
+.backgroundImage {
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none; /* 배경 이미지가 클릭을 방해하지 않도록 */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title {
+  font-family: var(--font-archivo-black);
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1.1;
+  letter-spacing: -0.07em;
+  color: #F27B39;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  color: #3D3733;
+  font-weight: 700;
+  margin-bottom: 50px;
+}

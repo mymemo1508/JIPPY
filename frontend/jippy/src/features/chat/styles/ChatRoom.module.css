@@ -1,0 +1,32 @@
+.chatRoomContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+}
+
+.header {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.memberCount {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.footer {
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}

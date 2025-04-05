@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+mysql-connector-python
+pandas
+openpyxl
+scikit-learn
+transformers
+torch
+accelerate
+konlpy
+jpype1
+evaluate

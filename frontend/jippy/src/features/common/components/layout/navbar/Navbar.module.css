@@ -1,0 +1,137 @@
+.navbar {
+  @apply fixed top-0 left-0 right-0 bg-white shadow-sm z-50;
+}
+
+.container {
+  @apply w-full;
+}
+
+.wrapper {
+  @apply flex justify-between items-center h-16;
+}
+
+.logo {
+  @apply flex-shrink-0 pl-6;
+}
+
+.logoText {
+  @apply text-2xl;
+  font-family: var(--font-archivo-black);
+  color: #F27B39;
+  line-height: 1.1;
+}
+
+.desktopMenu {
+  @apply hidden md:flex items-center;
+}
+
+.navLinks {
+  @apply pr-8 space-x-8;
+}
+
+.navLink {
+  @apply font-semibold;
+  color: #3D3733;
+}
+
+.navLink:hover {
+  color: #F27B39;
+}
+
+.qrButton {
+  @apply relative w-6 h-6;
+}
+
+.qrButton:hover {
+  @apply bg-gray-50;
+}
+
+.qrImage {
+  @apply object-contain;
+}
+
+.profileDropdown {
+  @apply relative h-full;
+}
+
+.profileButton {
+  @apply flex items-center space-x-1 h-16 px-6 font-semibold;
+  color: #3D3733;
+}
+
+.profileButton:hover {
+  color: #F27B39;
+}
+
+.dropdownIcon {
+  @apply h-4 w-4 ml-1;
+}
+
+.dropdownContent {
+  @apply absolute right-0 top-16 w-48 bg-white shadow-lg border-t border-gray-100;
+}
+
+.dropdownItem {
+  @apply block px-4 py-2 text-sm font-semibold;
+  color: #3D3733;
+}
+
+.dropdownItem:hover {
+  color: #F27B39;
+  @apply bg-gray-50;
+}
+
+.dropdownButton {
+  @apply block w-full text-left px-4 py-2 text-sm font-semibold;
+  color: #3D3733;
+}
+
+.dropdownButton:hover {
+  color: #F27B39;
+  @apply bg-gray-50;
+}
+
+.loginLink {
+  @apply px-4 h-16 flex items-center font-semibold;
+  color: #3D3733;
+}
+
+.loginLink:hover {
+  color: #F27B39;
+}
+
+.mobileMenuButton {
+  @apply md:hidden flex items-center;
+}
+
+.mobileMenuIcon {
+  @apply inline-flex items-center justify-center p-2 rounded-md;
+  color: #3D3733;
+}
+
+.mobileMenuIcon:hover {
+  color: #F27B39;
+  @apply bg-gray-50;
+}
+
+.mobileNav {
+  @apply md:hidden;
+}
+
+.mobileNavContent {
+  @apply px-2 pt-2 pb-3 space-y-1;
+}
+
+.mobileNavLink {
+  @apply block px-3 py-2 rounded-md font-semibold;
+  color: #3D3733;
+}
+
+.mobileNavLink:hover {
+  color: #F27B39;
+  @apply bg-gray-50;
+}
+
+.mobileDivider {
+  @apply border-t border-gray-200 my-2;
+}
